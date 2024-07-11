@@ -23,6 +23,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M004-Routing", "M004-Routin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleFleetV2Api", "VehicleFleetV2Api\VehicleFleetV2Api.csproj", "{D51BC4C8-8F04-4008-8BDB-A219AF57F107}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieStoreApi", "MovieStoreApi\MovieStoreApi.csproj", "{EDD29213-2CF4-46BB-B4B0-2B8BB0A493AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,10 @@ Global
 		{D51BC4C8-8F04-4008-8BDB-A219AF57F107}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D51BC4C8-8F04-4008-8BDB-A219AF57F107}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D51BC4C8-8F04-4008-8BDB-A219AF57F107}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDD29213-2CF4-46BB-B4B0-2B8BB0A493AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDD29213-2CF4-46BB-B4B0-2B8BB0A493AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDD29213-2CF4-46BB-B4B0-2B8BB0A493AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDD29213-2CF4-46BB-B4B0-2B8BB0A493AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +65,7 @@ Global
 		{AE247BDE-5CCB-4961-8BD2-8CFF773D4D0F} = {133138E1-6C62-499F-95C3-7518DAD92737}
 		{A331DD50-1186-4E1F-B889-EFF903060614} = {7F6F9D96-DDC7-4877-8985-26D829CFB937}
 		{D51BC4C8-8F04-4008-8BDB-A219AF57F107} = {5CD71F07-6801-42BE-A054-81C20D8941DC}
+		{EDD29213-2CF4-46BB-B4B0-2B8BB0A493AB} = {5CD71F07-6801-42BE-A054-81C20D8941DC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3D2B1C5C-7B67-4496-9826-CA0F703BC8E1}

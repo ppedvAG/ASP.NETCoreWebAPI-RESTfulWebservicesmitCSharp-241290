@@ -1,0 +1,44 @@
+@MovieStoreApi_HostAddress = http://localhost:5138
+
+GET {{MovieStoreApi_HostAddress}}/api/movie/all/
+Accept: application/json
+
+###
+
+GET {{MovieStoreApi_HostAddress}}/api/movie/find/2
+Accept: application/json
+
+###
+
+POST {{MovieStoreApi_HostAddress}}/api/movie/Create
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": 5,
+  "title": "Pulp Fiction",
+  "description": "Some iconic movie",
+  "price": "5.99",
+  "genre": 0
+}
+
+###
+
+PUT {{MovieStoreApi_HostAddress}}/api/movie/Update/2
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": 2,
+  "title": "Rat Race",
+  "description": "Very funny movie",
+  "price": "5.99",
+  "genre": 2
+}
+
+###
+
+Delete {{MovieStoreApi_HostAddress}}/api/movie/Delete/1
+Accept: application/json
+
+###
