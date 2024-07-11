@@ -22,7 +22,7 @@ namespace VehicleFleetApi.Controllers
         public IEnumerable<Vehicle> GetVehicles()
         {
             var vehicles = Enumerable.Range(0, 5)
-                .Select(i => _vehicleService.CreateVehicle(i))
+                .Select(i => _vehicleService.GenerateVehicle(i))
                 .ToList();
             return vehicles;
         }
