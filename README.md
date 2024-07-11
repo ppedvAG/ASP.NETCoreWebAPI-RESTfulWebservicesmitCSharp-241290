@@ -19,27 +19,27 @@
 
 ## M003 | Controller und Konventionen
 
-- [ ] DeepDive ControllerBase
-- [ ] Best Practices: DI, Controller, DTOs, Mapper
-- [ ] WebAPI Konventionen
-- [ ] Http-Methoden (GET / POST / DELETE / PATCH)
-- [ ] Erwartetede Rückgabewerte und Statuscodes
-- [ ] Return Values
+- [x] DeepDive ControllerBase
+- [x] Best Practices: DI, Controller
+- [x] WebAPI Konventionen
+- [x] Http-Methoden (GET / POST / DELETE / PATCH)
+- [x] Erwartetede Rückgabewerte und Statuscodes
+- [x] Return Values
 
 ## M004 | Routing, MediaTypes, Async/Await
 
-- [ ] Konventionelles [Routing](https://learn.microsoft.com/en-us/aspnet/web-api/overview/web-api-routing-and-actions/)
-- [ ] Attribute Routing
-- [ ] Token Replacement
-- [ ] Route Constraints
-- [ ] [Model Binding](https://learn.microsoft.com/en-us/aspnet/web-api/overview/formats-and-model-binding/)
+- [x] Konventionelles [Routing](https://learn.microsoft.com/en-us/aspnet/web-api/overview/web-api-routing-and-actions/)
+- [x] Attribute Routing
+- [x] Token Replacement
+- [x] Route Constraints
+- [x] [Model Binding](https://learn.microsoft.com/en-us/aspnet/web-api/overview/formats-and-model-binding/)
 
-- [ ] Content Negotiation
-- [ ] MediaTypes & [Formatters](https://learn.microsoft.com/en-us/aspnet/web-api/overview/formats-and-model-binding/media-formatters)
+- [x] Content Negotiation
+- [x] MediaTypes & [Formatters](https://learn.microsoft.com/en-us/aspnet/web-api/overview/formats-and-model-binding/media-formatters)
 
 - [ ] Async/Await Pattern
 
-- [ ] Lab Movies
+- [x] Lab Movies
 
 ## M005 | WebAPI mit EFCore
 
@@ -50,6 +50,7 @@
 
 - [ ] O/R Mapping Framework EFCore
 - [ ] Code First Ansatz (Entites + DbContext)
+- [ ] Best Practices: DTOs, Mapper
 - [ ] DB Migration
 
 ```bash

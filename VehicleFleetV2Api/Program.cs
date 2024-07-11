@@ -13,7 +13,7 @@ namespace VehicleFleetV2Api
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-            builder.Services.AddScoped<IVehicleService, VehicleService>();
+            builder.Services.AddScoped<IVehicleService, StaticVehicleService>();
 
             builder.Services.AddControllers()
                 .AddJsonOptions(options =>

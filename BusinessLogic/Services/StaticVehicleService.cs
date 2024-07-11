@@ -5,7 +5,7 @@ using System.Drawing;
 
 namespace BusinessLogic.Services
 {
-    public class VehicleService : IVehicleService
+    public class StaticVehicleService : IVehicleService
     {
         private readonly Faker _faker = new Faker();
 
@@ -16,6 +16,7 @@ namespace BusinessLogic.Services
         // Static Members sollten im Web-Context NIE verwendet werden. Gruende:
         //      1. Weil REST per se zustandslos sein muss
         //      2. Potentielle Speicherlecks weil statische Members ueber die gesamte Laufzeit des Servers gehalten werden (Monate)
+        //      3. Concurrency Problem wenn mehrere Clients simultan auf die gleichen Daten zugreifen
         private static readonly List<Vehicle> _vehicleFleet =
         [
             new Vehicle
