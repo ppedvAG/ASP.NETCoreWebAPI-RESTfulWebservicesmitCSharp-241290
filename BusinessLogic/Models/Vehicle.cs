@@ -1,9 +1,13 @@
-﻿using System.Drawing;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Drawing;
 
 namespace BusinessLogic.Models
 {
+    [PrimaryKey("Id")]
     public class Vehicle
     {
+        [Column("VehicleId")]
         public int Id { get; set; }
 
         public string Manufacturer { get; set; }

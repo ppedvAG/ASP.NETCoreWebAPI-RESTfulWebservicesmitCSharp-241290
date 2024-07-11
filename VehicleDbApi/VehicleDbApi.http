@@ -1,0 +1,48 @@
+@VehicleDbApi_HostAddress = http://localhost:5252
+
+GET {{VehicleDbApi_HostAddress}}/api/vehicles
+Accept: application/json
+
+###
+
+GET {{VehicleDbApi_HostAddress}}/api/vehicles/1
+Accept: application/json
+
+###
+
+POST {{VehicleDbApi_HostAddress}}/api/vehicles
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": 5,
+  "manufacturer": "BMW",
+  "model": "Isetta",
+  "type": "Kugel",
+  "fuel": "Benziner",
+  "topSpeed": 60,
+  "color": "Blue"
+}
+
+###
+
+PUT {{VehicleDbApi_HostAddress}}/api/vehicles/2
+Content-Type: application/json
+Accept: application/json
+
+{
+  "id": 5,
+  "manufacturer": "BMW",
+  "model": "i8",
+  "color": "red",
+  "topSpeed": 320,
+  "fuel": "Hybrid",
+  "type": "Coupe"
+}
+
+###
+
+Delete {{VehicleDbApi_HostAddress}}/api/vehicles/1
+Accept: application/json
+
+###

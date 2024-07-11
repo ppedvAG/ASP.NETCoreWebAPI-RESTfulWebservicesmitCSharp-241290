@@ -48,10 +48,10 @@
     - Microsoft.EntityFrameworkCore.Tools
 -->
 
-- [ ] O/R Mapping Framework EFCore
-- [ ] Code First Ansatz (Entites + DbContext)
+- [x] O/R Mapping Framework EFCore
+- [x] Code First Ansatz (Entites + DbContext)
 - [ ] Best Practices: DTOs, Mapper
-- [ ] DB Migration
+- [x] DB Migration
 
 ```bash
 	dotnet tool install --global dotnet-ef
@@ -60,7 +60,7 @@
 	dotnet watch run
 ```
 
-- [ ] Controller mit Scaffolding erstellen (Microsoft.EntityFrameworkCore.Design)
+- [x] Controller mit Scaffolding erstellen (Microsoft.EntityFrameworkCore.Design)
 <!--
 	```bash
 	dotnet tool install -g dotnet-aspnet-codegenerator
