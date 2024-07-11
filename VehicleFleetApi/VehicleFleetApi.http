@@ -1,0 +1,6 @@
+@VehicleFleetApi_HostAddress = https://localhost:7072
+
+GET {{VehicleFleetApi_HostAddress}}/api/v1/vehicle/generate
+Accept: application/json
+
+###
