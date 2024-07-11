@@ -2,8 +2,8 @@
 
 ## M001 | Grundlagen
 
-- [ ] Was ist Rest
-- [ ] ASP.NET Core WebAPI - Grundaufbau
+- [x] Was ist Rest
+- [x] ASP.NET Core WebAPI - Grundaufbau
 
 ## M002 | Überblick und IOC
 
