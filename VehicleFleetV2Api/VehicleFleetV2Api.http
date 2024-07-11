@@ -5,6 +5,16 @@ Accept: application/json
 
 ###
 
+GET {{VehicleFleetV2Api_HostAddress}}/api/v2/vehicle/GetAll
+Accept: text/xml
+
+###
+
+GET {{VehicleFleetV2Api_HostAddress}}/api/v2/vehicle/GetAll
+Accept: text/csv
+
+###
+
 GET {{VehicleFleetV2Api_HostAddress}}/api/v2/vehicle/GetSingle/1
 Accept: application/json
 

@@ -2,6 +2,7 @@
 using BusinessLogic.Contracts;
 using BusinessLogic.Services;
 using System.Text.Json.Serialization;
+using WebApiContrib.Core.Formatter.Csv;
 
 namespace VehicleFleetV2Api
 {
@@ -14,10 +15,14 @@ namespace VehicleFleetV2Api
             // Add services to the container.
             builder.Services.AddScoped<IVehicleService, VehicleService>();
 
-            builder.Services.AddControllers().AddJsonOptions(options =>
-            {
-                options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
-            });
+            builder.Services.AddControllers()
+                .AddJsonOptions(options =>
+                {
+                    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+                    options.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles;
+                })
+                .AddXmlSerializerFormatters()
+                .AddCsvSerializerFormatters();
 
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
