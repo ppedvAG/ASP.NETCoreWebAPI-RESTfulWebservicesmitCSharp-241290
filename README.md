@@ -7,15 +7,15 @@
 
 ## M002 | Überblick und IOC
 
-- [ ] [Dependency Injection](https://learn.microsoft.com/en-us/aspnet/web-api/overview/advanced/dependency-injection) mit ServiceCollection
-- [ ] Middleware
+- [x] [Dependency Injection](https://learn.microsoft.com/en-us/aspnet/web-api/overview/advanced/dependency-injection) mit ServiceCollection
+- [x] Middleware
 
-- [ ] Projektstruktur
-- [ ] Erstellen eines WebAPI - Projektes
-- [ ] Beispiel WheatherForcecast
-- [ ] appsettings.json
-- [ ] [http-files](https://learn.microsoft.com/en-us/aspnet/core/test/http-files)
-- [ ] [Error Handling](https://learn.microsoft.com/en-us/aspnet/web-api/overview/error-handling/exception-handling)
+- [x] Projektstruktur
+- [x] Erstellen eines WebAPI - Projektes
+- [x] Beispiel WheatherForcecast
+- [x] appsettings.json
+- [x] [http-files](https://learn.microsoft.com/en-us/aspnet/core/test/http-files)
+- [x] [Error Handling](https://learn.microsoft.com/en-us/aspnet/web-api/overview/error-handling/exception-handling)
 
 ## M003 | Controller und Konventionen
 
