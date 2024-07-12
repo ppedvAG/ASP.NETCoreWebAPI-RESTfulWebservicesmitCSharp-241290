@@ -125,8 +125,8 @@
 
 ## M009 | OData Service
 
-- [ ] Install-Package Microsoft.AspNetCore.OData
-- [ ] [OData](https://learn.microsoft.com/en-us/aspnet/web-api/overview/odata-support-in-aspnet-web-api/) konfigurieren auf Northwind DB
+- [x] Install-Package Microsoft.AspNetCore.OData
+- [x] [OData](https://learn.microsoft.com/en-us/aspnet/web-api/overview/odata-support-in-aspnet-web-api/) konfigurieren auf Northwind DB
 
 <!-- https://github.com/OData/AspNetCoreOData/tree/main/sample/ODataAlternateKeySample -->
 
