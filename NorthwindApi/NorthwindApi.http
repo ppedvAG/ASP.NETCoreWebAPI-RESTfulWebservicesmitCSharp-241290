@@ -1,6 +1,25 @@
 @NorthwindApi_HostAddress = http://localhost:5000
 
-GET {{NorthwindApi_HostAddress}}/api/customers
+GET {{NorthwindApi_HostAddress}}/api/customers/
+Accept: application/json
+
+###
+
+GET {{NorthwindApi_HostAddress}}/api/customers?country=Canada
+Accept: application/json
+
+###
+
+GET {{NorthwindApi_HostAddress}}/api/orders/
+Accept: application/json
+
+###
+
+GET {{NorthwindApi_HostAddress}}/api/orders/?customerid=ANTON
+Accept: application/json
+
+###
+GET {{NorthwindApi_HostAddress}}/api/orders/?startdate=1997-05-01&enddate=1997-05-11
 Accept: application/json
 
 ###
