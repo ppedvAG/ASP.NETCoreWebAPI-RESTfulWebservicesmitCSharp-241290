@@ -92,10 +92,10 @@
 
 ## M006 | Testing
 
-- [ ] [Überblick Strategien](https://learn.microsoft.com/de-de/ef/core/testing/)
-- [ ] [Unit Testing Controllers](https://learn.microsoft.com/en-us/aspnet/web-api/overview/testing-and-debugging/unit-testing-controllers-in-web-api)
-- [ ] Moq benutzen um Controller Dependencies zu mocken
-- [ ] LocalDB benutzen
+- [x] [Überblick Strategien](https://learn.microsoft.com/de-de/ef/core/testing/)
+- [x] [Unit Testing Controllers](https://learn.microsoft.com/en-us/aspnet/web-api/overview/testing-and-debugging/unit-testing-controllers-in-web-api)
+- [x] Moq benutzen um Controller Dependencies zu mocken
+- [x] LocalDB benutzen
 
 <!-- https://learn.microsoft.com/en-us/aspnet/web-api/overview/testing-and-debugging/ -->
 

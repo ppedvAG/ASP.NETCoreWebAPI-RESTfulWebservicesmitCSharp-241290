@@ -41,6 +41,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M009-OData", "M009-OData", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindODataApi", "NorthwindODataApi\NorthwindODataApi.csproj", "{E2CAF246-91CA-4229-AB29-8D2517B53AF4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M006-Testing", "M006-Testing", "{DC6431C5-0A4A-4DB3-9420-24E3C1316A9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleFleetTestProject", "VehicleFleetTestProject\VehicleFleetTestProject.csproj", "{00BE5D58-F8F9-44B8-B96E-72EE4C3F5E0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +95,10 @@ Global
 		{E2CAF246-91CA-4229-AB29-8D2517B53AF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E2CAF246-91CA-4229-AB29-8D2517B53AF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E2CAF246-91CA-4229-AB29-8D2517B53AF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00BE5D58-F8F9-44B8-B96E-72EE4C3F5E0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00BE5D58-F8F9-44B8-B96E-72EE4C3F5E0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00BE5D58-F8F9-44B8-B96E-72EE4C3F5E0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00BE5D58-F8F9-44B8-B96E-72EE4C3F5E0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -107,6 +115,7 @@ Global
 		{4B76B339-B614-4BF7-9867-275E3A270145} = {7F6F9D96-DDC7-4877-8985-26D829CFB937}
 		{FAF5620C-FBF3-4120-8EAB-D62A4B1E9884} = {E4660F7B-52C1-4737-BEB8-164C89AB0288}
 		{E2CAF246-91CA-4229-AB29-8D2517B53AF4} = {7B9C98ED-5C81-4D6C-8928-8D48CC6E90EB}
+		{00BE5D58-F8F9-44B8-B96E-72EE4C3F5E0B} = {DC6431C5-0A4A-4DB3-9420-24E3C1316A9F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3D2B1C5C-7B67-4496-9826-CA0F703BC8E1}
