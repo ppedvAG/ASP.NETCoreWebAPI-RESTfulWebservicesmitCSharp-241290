@@ -69,9 +69,9 @@
 	```
 -->
 
-- [ ] DB First Ansatz
-- [ ] [Northwind DB](https://github.com/microsoft/sql-server-samples/blob/master/samples/databases/northwind-pubs/instnwnd.sql)
-- [ ] LocalDB
+- [x] DB First Ansatz
+- [x] [Northwind DB](https://github.com/microsoft/sql-server-samples/blob/master/samples/databases/northwind-pubs/instnwnd.sql)
+- [x] LocalDB
 
 <!--
 	```bash
