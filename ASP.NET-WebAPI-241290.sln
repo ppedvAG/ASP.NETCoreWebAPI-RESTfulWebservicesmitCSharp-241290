@@ -33,6 +33,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindApi", "NorthwindAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NorthwindAccess", "NorthwindAccess\NorthwindAccess.csproj", "{4B76B339-B614-4BF7-9867-275E3A270145}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "M008-WebClient", "M008-WebClient", "{E4660F7B-52C1-4737-BEB8-164C89AB0288}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpClientDemo", "HttpClientDemo\HttpClientDemo.csproj", "{FAF5620C-FBF3-4120-8EAB-D62A4B1E9884}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,10 @@ Global
 		{4B76B339-B614-4BF7-9867-275E3A270145}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B76B339-B614-4BF7-9867-275E3A270145}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B76B339-B614-4BF7-9867-275E3A270145}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAF5620C-FBF3-4120-8EAB-D62A4B1E9884}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAF5620C-FBF3-4120-8EAB-D62A4B1E9884}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAF5620C-FBF3-4120-8EAB-D62A4B1E9884}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAF5620C-FBF3-4120-8EAB-D62A4B1E9884}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -89,6 +97,7 @@ Global
 		{37FB982B-C7F6-4A01-AC49-5DD3F961737E} = {8A90D5D5-F746-4BD4-AEE5-4D2E3FF8D8C9}
 		{F6B67901-323E-4931-889E-0B1F426308B0} = {8A90D5D5-F746-4BD4-AEE5-4D2E3FF8D8C9}
 		{4B76B339-B614-4BF7-9867-275E3A270145} = {7F6F9D96-DDC7-4877-8985-26D829CFB937}
+		{FAF5620C-FBF3-4120-8EAB-D62A4B1E9884} = {E4660F7B-52C1-4737-BEB8-164C89AB0288}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3D2B1C5C-7B67-4496-9826-CA0F703BC8E1}

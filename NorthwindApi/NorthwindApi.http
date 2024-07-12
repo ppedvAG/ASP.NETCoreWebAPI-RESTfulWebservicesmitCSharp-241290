@@ -23,3 +23,8 @@ GET {{NorthwindApi_HostAddress}}/api/orders/?startdate=1997-05-01&enddate=1997-0
 Accept: application/json
 
 ###
+
+GET {{NorthwindApi_HostAddress}}/api/orders/11080
+Accept: application/json
+
+###

@@ -120,8 +120,8 @@
 
 ## M008 | HTTP-Client
 
-- [ ] HTTP Client
-- [ ] Daten senden/empfangen
+- [x] HTTP Client
+- [x] Daten senden/empfangen mit POST, GET, UPDATE, DELETE
 
 ## M009 | OData Service
 
