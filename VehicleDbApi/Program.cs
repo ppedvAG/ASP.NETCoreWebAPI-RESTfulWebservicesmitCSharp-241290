@@ -15,7 +15,7 @@ namespace VehicleDbApi
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 
             // Add services to the container.
-            builder.Services.AddTransient<IVehicleService, VehicleDbService>();
+            builder.Services.AddTransient<IVehicleServiceAsync, VehicleDbService>();
             builder.Services.AddDbContext<DemoDbContext>(options => options.UseSqlServer(connectionString));
 
             builder.Services.AddControllers();

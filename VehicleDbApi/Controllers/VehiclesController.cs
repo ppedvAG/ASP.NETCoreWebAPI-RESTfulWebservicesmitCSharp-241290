@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using BusinessLogic.Contracts;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using BusinessLogic;
-using BusinessLogic.Models;
+using VehicleDbApi.Mappers;
+using VehicleDbApi.Models;
 
 namespace VehicleDbApi.Controllers
 {
@@ -14,60 +9,47 @@ namespace VehicleDbApi.Controllers
     [ApiController]
     public class VehiclesController : ControllerBase
     {
-        private readonly DemoDbContext _context;
+        private readonly IVehicleServiceAsync _vehicleService;
 
-        public VehiclesController(DemoDbContext context)
+        public VehiclesController(IVehicleServiceAsync vehicleService)
         {
-            _context = context;
+            _vehicleService = vehicleService;
         }
 
         // GET: api/Vehicles
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Vehicle>>> GetVehicles()
+        public async Task<ActionResult<IEnumerable<VehicleDto>>> GetVehicles()
         {
-            return await _context.Vehicles.ToListAsync();
+            var result = await _vehicleService.GetVehicles();
+            return Ok(result.Select(obj => obj.ToDto()));
         }
 
         // GET: api/Vehicles/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Vehicle>> GetVehicle(int id)
+        public async Task<ActionResult<VehicleDto>> GetVehicle(int id)
         {
-            var vehicle = await _context.Vehicles.FindAsync(id);
+            var vehicle = await _vehicleService.GetVehicle(id);
 
             if (vehicle == null)
             {
                 return NotFound();
             }
 
-            return vehicle;
+            return vehicle.ToDto();
         }
 
         // PUT: api/Vehicles/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutVehicle(int id, Vehicle vehicle)
+        public async Task<IActionResult> PutVehicle(int id, VehicleDto vehicle)
         {
-            if (id != vehicle.Id)
-            {
-                return BadRequest();
-            }
-
-            _context.Entry(vehicle).State = EntityState.Modified;
-
             try
             {
-                await _context.SaveChangesAsync();
+                await _vehicleService.UpdateVehicle(id, vehicle.ToEntity());
             }
-            catch (DbUpdateConcurrencyException)
+            catch (InvalidOperationException ex)
             {
-                if (!VehicleExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
+                return NotFound(ex.Message);
             }
 
             return NoContent();
@@ -76,33 +58,40 @@ namespace VehicleDbApi.Controllers
         // POST: api/Vehicles
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Vehicle>> PostVehicle(Vehicle vehicle)
+        public async Task<IActionResult> PostVehicle(VehicleDto vehicle)
         {
-            _context.Vehicles.Add(vehicle);
-            await _context.SaveChangesAsync();
+            // Required Fields ueberpruefen
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
 
-            return CreatedAtAction("GetVehicle", new { id = vehicle.Id }, vehicle);
+            try
+            {
+                var id = await _vehicleService.AddVehicle(vehicle.ToEntity());
+                var newVehicle = await _vehicleService.GetVehicle(id);
+                return Ok(newVehicle.ToDto());
+            }
+            catch (InvalidOperationException ex)
+            {
+                return NotFound(ex.Message);
+            }
         }
 
         // DELETE: api/Vehicles/5
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteVehicle(int id)
         {
-            var vehicle = await _context.Vehicles.FindAsync(id);
-            if (vehicle == null)
+            try
             {
-                return NotFound();
+                await _vehicleService.DeleteVehicle(id);
+            }
+            catch (InvalidOperationException ex)
+            {
+                return NotFound(ex.Message);
             }
 
-            _context.Vehicles.Remove(vehicle);
-            await _context.SaveChangesAsync();
-
             return NoContent();
-        }
-
-        private bool VehicleExists(int id)
-        {
-            return _context.Vehicles.Any(e => e.Id == id);
         }
     }
 }

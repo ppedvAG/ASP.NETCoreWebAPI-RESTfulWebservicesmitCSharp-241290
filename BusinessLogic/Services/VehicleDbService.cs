@@ -1,10 +1,11 @@
 ﻿using BusinessLogic.Contracts;
 using BusinessLogic.Models;
+using Microsoft.EntityFrameworkCore;
 using System.Drawing;
 
 namespace BusinessLogic.Services
 {
-    public class VehicleDbService : IVehicleService
+    public class VehicleDbService : IVehicleServiceAsync
     {
         private readonly Bogus.Faker _faker = new();
         private readonly DemoDbContext _context;
@@ -32,39 +33,33 @@ namespace BusinessLogic.Services
 
         #region CRUD Operations
 
-        public IEnumerable<Vehicle> GetVehicles()
+        public async Task<IEnumerable<Vehicle>> GetVehicles()
         {
-            return _context.Vehicles.ToArray();
+            return await _context.Vehicles.ToArrayAsync();
         }
 
-        public Vehicle GetVehicle(int id)
+        public async Task<Vehicle> GetVehicle(int id)
         {
-            return _context.Vehicles.FirstOrDefault(x => x.Id == id);
+            return await _context.Vehicles.FirstOrDefaultAsync(x => x.Id == id);
         }
 
-        public void AddVehicle(Vehicle vehicle)
+        public async Task<int> AddVehicle(Vehicle vehicle)
         {
-            if (GetVehicle(vehicle.Id) == null)
-            {
-                _context.Vehicles.Add(vehicle);
-                _context.SaveChanges();
-            }
-            else
-            {
-                throw new InvalidOperationException("Vehicle already exists");
-            }
+            var result = _context.Vehicles.Add(vehicle);
+            await _context.SaveChangesAsync();
+
+            return result.Entity.Id;
         }
 
-        public Vehicle UpdateVehicle(int id, Vehicle vehicle)
+        public async Task<Vehicle> UpdateVehicle(int id, Vehicle vehicle)
         {
-            var existing = GetVehicle(id);
+            var existing = await GetVehicle(id);
             if (existing != null)
             {
-                _context.Vehicles.Remove(existing);
-                _context.Vehicles.Add(vehicle);
-                _context.SaveChanges();
+                _context.Entry(vehicle).State = EntityState.Modified;
+                await _context.SaveChangesAsync();
 
-                return GetVehicle(id);
+                return await GetVehicle(id);
             }
             else
             {
@@ -72,13 +67,13 @@ namespace BusinessLogic.Services
             }
         }
 
-        public void DeleteVehicle(int id)
+        public async Task DeleteVehicle(int id)
         {
-            var existing = GetVehicle(id);
+            var existing = await GetVehicle(id);
             if (existing != null)
             {
                 _context.Vehicles.Remove(existing);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
             }
             else
             {

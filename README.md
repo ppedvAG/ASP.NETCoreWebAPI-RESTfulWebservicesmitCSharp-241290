@@ -50,8 +50,8 @@
 
 - [x] O/R Mapping Framework EFCore
 - [x] Code First Ansatz (Entites + DbContext)
-- [ ] Best Practices: DTOs, Mapper
 - [x] DB Migration
+- [x] Best Practices: DTOs, Mapper
 
 ```bash
 	dotnet tool install --global dotnet-ef
